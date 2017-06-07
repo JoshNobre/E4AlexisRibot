@@ -1,0 +1,18 @@
+table {
+	border:3px solid #6495ed;
+	border-collapse:collapse;
+	width:90%;
+	margin:auto;
+}
+td{
+font-family: sans-serif;
+border: thin solid #6495ed;
+width: 50%;
+padding: 5px;
+text-align: center;
+background-color: #ffffff;
+}
+tbody{
+background-color:#FFFFFF;
+border:1px solid #6495ed;
+}
