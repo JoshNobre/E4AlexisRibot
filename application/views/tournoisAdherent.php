@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<meta charset="charset=utf-8" />
-		<title>Licence</title>
+		<title>Tournois</title>
         <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../assets/css/tournoiAdherent.css"></link>
         <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
         <script src="../assets/javascript/app.js"></script>
 	</head>
@@ -26,10 +27,11 @@
     </div>
     <ul class="nav navbar-nav">
       <li><a href="<?php echo site_url('accueil/pagePrincipale') ?>">Accueil</a></li>
-      <li class="active"><a href="formlicence">Licence</a></li>
-      <li><a href="#">Tournois</a></li>
+      <li><a href="../licence/formlicence">Licence</a></li>
+      <li class="active"><a href="#">Tournois</a></li>
       <li><a href="#">Stages</a></li>
-      <li><a href="#">Matériel</a></li>
+      <li><a href="../materielAdherent/materiel">Matériel</a></li>
+      <li><a href="<?php echo site_url('deconnexion/deco') ?>">Déconnexion</a></li>
     </ul>
   </div>
 </nav>

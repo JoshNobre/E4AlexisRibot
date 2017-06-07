@@ -4,7 +4,7 @@
 		<meta charset="charset=utf-8" />
 		<title>Cotisations</title>
         <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
-        <link rel="stylesheet" type="text/css" href="../assets/css/style.css"></link>
+        <link rel="stylesheet" type="text/css" href="../assets/css/styleCotisations.css"></link>
         <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
         <script src="../assets/javascript/app.js"></script>
         <script src="../assets/javascript/bootstrap.min.js"></script> 
@@ -56,6 +56,8 @@
 <?php 
     echo '<br/><br/><br/>';
     echo form_open(''); 
+    echo '<fieldset>';
+    echo '<legend> Validation des cotisations </legend>';
     echo '<div class="form-style-5">';
     echo '<label class="control-label col-lg-12"> Adhérent </label>';
     echo '<select name="adherent">';
@@ -91,6 +93,7 @@
     echo form_submit('envoi', 'Valider'); 
     echo form_close();   
     echo '</div>';  
+    echo '</fieldset>';
 ?>
 </body>
 </html> 

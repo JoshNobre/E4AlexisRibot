@@ -10,9 +10,7 @@ class Connexion extends CI_Controller
     {
         $login = $this->input->get_post('login');
         $mdp = $this->input->get_post('mdp');
-     /*   $grain = 'a54JSp4aO9';
-        $sel = '8jsOp47a5q4';
-        $mdp = sha1($grain.$mdp.$sel); */
+        $mdp = sha1($mdp); 
         
         $this->load->library('form_validation');
     	$this->load->helper('form');

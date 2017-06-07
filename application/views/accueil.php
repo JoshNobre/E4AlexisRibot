@@ -10,6 +10,7 @@
 	</head>
 <body>
 <?php
+       var_dump($_SESSION);
     if(empty($_SESSION['id_user']) && !empty($_SESSION['id_admin'])) { ?>
       <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -45,6 +46,7 @@
                 <li><a href="<?php echo site_url('tableauCotisation/cotisation') ?>">Récapitulatif des cotisations</a></li>
               </ul>
             </li>
+            <li><a href="<?php echo site_url('deconnexion/deco') ?>">Déconnexion</a></li>
           </ul>
         </div>
     </nav>
@@ -61,6 +63,7 @@
               <li><a href="<?php echo site_url('tournoisAdherent/tournoisListe') ?>">Tournois</a></li>
               <li><a href="#">Stages</a></li>
               <li><a href="<?php echo site_url('materielAdherent/materiel') ?>">Matériel</a></li>
+              <li><a href="<?php echo site_url('deconnexion/deco') ?>">Déconnexion</a></li>
             </ul>
           </div>
       </nav>

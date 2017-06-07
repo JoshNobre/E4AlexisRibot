@@ -9,7 +9,7 @@ class MaterielAdherent_model extends CI_Model
     protected $table5 = 'payer';
 
     public function getMateriel() {
-        return $this->db->select('Id_Materiel, Nom_Materiel, Prix_Materiel')
+        return $this->db->select('Id_Materiel, Nom_Materiel, Prix_Achat, Prix_Location')
         	->from($this->table)
         	->get()
         	->result();
@@ -24,11 +24,12 @@ class MaterielAdherent_model extends CI_Model
         return $this->db->insert($this->table2);
     }
 
-    public function insertLocation($dateLocation, $numLicence, $idMateriel, $qte) {
+    public function insertLocation($dateLocation, $numLicence, $idMateriel, $qte, $temps) {
     	$this->db->set('Date_location', $dateLocation);
         $this->db->set('Num_Licence', $numLicence);
         $this->db->set('Id_Materiel', $idMateriel);
         $this->db->set('QteLouee', $qte);
+        $this->db->set('Temps_Location', $qte);
 
         return $this->db->insert($this->table3);
     }

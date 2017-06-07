@@ -26,9 +26,7 @@ class Inscription extends CI_Controller
     		if($this->form_validation->run() == false) {
     			echo validation_errors();
     		} else {
-            /*$grain = 'a54JSp4aO9';
-            $sel = '8jsOp47a5q4';
-            $mdp = sha1($grain.$mdp.$sel);*/
+            $mdp = sha1($mdp);
     		    $resultat = $this->inscription->ajouter_utilisateur($username, $mdp, $adulte, $dateInscription);
             $this->session->set_userdata('adulte', $adulte);
             $this->session->set_userdata('id', $this->inscription->getId($username)[0]->Id);
@@ -37,6 +35,7 @@ class Inscription extends CI_Controller
     		}
 	   
     }
+
 }
 
 ?>

@@ -4,6 +4,7 @@
 		<meta charset="charset=utf-8" />
 		<title>Matériel</title>
         <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../assets/css/materiel.css"></link>
         <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
         <script src="../assets/javascript/app.js"></script>
         <script src="../assets/javascript/bootstrap.min.js"></script> 
@@ -54,6 +55,8 @@
     </nav>
 <?php 
     echo form_open(''); 
+    echo '<fieldset>';
+    echo '<legend> Ajout de matériel </legend>';
     $nomMateriel = array(
         'type'=>'text',
         'class' => 'form-control name-saisie',
@@ -72,18 +75,28 @@
     echo form_input($qteStock);
     echo '<br/>';
 
-    $prix = array(
+    $prixAchat = array(
         'type'=>'text',
         'class' => 'form-control name-saisie',
-        'name'=>'prix',
-        'placeholder' => 'Prix');
-    echo '<label class="control-label col-lg-5"> Prix </label>';
-    echo form_input($prix);
+        'name'=>'prixAchat',
+        'placeholder' => 'Prix achat');
+    echo '<label class="control-label col-lg-5"> Prix achat </label>';
+    echo form_input($prixAchat);
+    echo '<br/>';
+
+        $prixLocation = array(
+        'type'=>'text',
+        'class' => 'form-control name-saisie',
+        'name'=>'prixLocation',
+        'placeholder' => 'Prix location');
+    echo '<label class="control-label col-lg-5"> Prix location </label>';
+    echo form_input($prixLocation);
     echo '<br/>';
 
         echo form_submit('envoi', 'Ajouter le matériel'); 
     echo '</div>';
     echo form_close(); 
+    echo '</fieldset>';
 ?>
 </body>
 </html> 

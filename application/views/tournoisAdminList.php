@@ -4,6 +4,7 @@
 		<meta charset="charset=utf-8" />
 		<title>Liste des participants aux tournois</title>
         <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../assets/css/tournoiAdminList.css"></link>
         <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
         <script src="../assets/javascript/app.js"></script>
         <script src="../assets/javascript/bootstrap.min.js"></script> 
@@ -54,7 +55,8 @@
     </nav>
 <?php 
     echo form_open(''); 
-    echo '<div class="col-lg-3">';
+    echo '<fieldset>';
+    echo '<legend> Inscrire un adhérent </legend>';   
         echo '<select name="tournoi">';
         foreach($this->tournoisAdminList->getTournoi() as $row) {
           echo '<option value='.$row->Id_Tournoi.'>'; echo $row->Nom_Tournoi; echo '</option>';
@@ -73,7 +75,7 @@
         'class' => 'form-control name-saisie',
         'name'=>'dateTournoi',
         'placeholder' => 'Date du tournoi');
-        echo '<label class="control-label col-lg-5"> Date du tournoi </label>';
+        echo '<label> Date du tournoi </label>';
         echo form_input($dateTournoi);
         echo '<br/>';
 
@@ -87,6 +89,7 @@
         echo form_submit('envoi', 'Inscrire l adherent'); 
     echo '</div>';
     echo form_close(); 
+    echo '</fieldset>';
 ?>
 </body>
 </html> 

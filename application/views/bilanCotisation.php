@@ -4,6 +4,7 @@
     <meta charset="charset=utf-8" />
     <title>Bilan des cotisations</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="../assets/css/bilanCotisation.css"></link>
     <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
     <script src="../assets/javascript/app.js"></script>
     <script src="../assets/javascript/bootstrap.min.js"></script> 

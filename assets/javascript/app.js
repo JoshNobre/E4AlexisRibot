@@ -5,3 +5,14 @@ function changeValueOfCheckboxes(val) {
 		$(val).val(0);
 	}
 }
+function changeDisplayOfMateriel() {
+	if($('#achatCheck').is(':checked')) {
+		$('#achat').css('display', 'block');
+		$('#location').css('display', 'none');
+	} 
+
+	if($('#locationCheck').is(':checked')) {
+		$('#location').css('display', 'block');
+		$('#achat').css('display', 'none');
+	}
+}

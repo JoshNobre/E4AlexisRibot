@@ -4,6 +4,7 @@
 		<meta charset="charset=utf-8" />
 		<title>Cotisations</title>
         <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
+        <link rel="stylesheet" type="text/css" href="../assets/css/tableauCotisation.css"></link>
         <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
         <script src="../assets/javascript/app.js"></script>
         <script src="../assets/javascript/bootstrap.min.js"></script> 
@@ -15,7 +16,7 @@
             <a class="navbar-brand" href="#">Plume cévenole</a>
           </div>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="<?php echo site_url('accueil/pagePrincipale') ?>">Accueil</a></li>
+            <li><a href="<?php echo site_url('accueil/pagePrincipale') ?>">Accueil</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Licences
               <span class="caret"></span></a>
@@ -34,13 +35,13 @@
             </li>
             <li><a href="#">Stages</a></li>
             <li><a href="<?php echo site_url('materiel/matos') ?>">Matériel</a></li>
-            <li class="dropdown">
+            <li class="dropdown active">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cotisations
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="<?php echo site_url('bilanCotisation/bilan') ?>">Bilan des cotisations</a></li>
                 <li><a href="<?php echo site_url('cotisation/gestionCotisation') ?>">Gestion des cotisations</a></li>
-                <li><a href="<?php echo site_url('tableauCotisation/cotisation') ?>">Récapitulatif des cotisations</a></li>
+                <li class="active"><a href="<?php echo site_url('tableauCotisation/cotisation') ?>">Récapitulatif des cotisations</a></li>
               </ul>
             </li>
           </ul>

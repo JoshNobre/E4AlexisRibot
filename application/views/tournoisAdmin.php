@@ -4,10 +4,7 @@
 		<meta charset="charset=utf-8" />
 		<title>Administration des tournois</title>
         <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css"></link>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../assets/css/form-elements.css">
-        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/styleAjoutTournoi.css">
         <script src="../assets/javascript/jquery-3.1.1.min.js"></script>
         <script src="../assets/javascript/app.js"></script>
         <script src="../assets/javascript/bootstrap.min.js"></script> 
@@ -64,6 +61,8 @@
 </nav> 
 <?php 
     echo form_open(''); 
+    echo '<fieldset>';
+    echo '<legend> Ajout de tournoi </legend>';
     echo '<div class="col-lg-3">';
     $nomTournoi = array(
         'name' => 'nomTournoi',
@@ -117,6 +116,7 @@
    echo form_submit('envoi', 'Créer le tournoi'); 
    echo '</div>';
    echo form_close(); 
+   echo '</fieldset>';
  }
 ?>
 </body>

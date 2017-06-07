@@ -18,6 +18,7 @@ class MaterielAdherent extends CI_Controller
         $typeCotisation = @$materielSplit[1];
         $prix = @$materielSplit[2];
         $montantCotisation = $qte * $prix;
+        $temps = $this->input->get_post('temps');
 
         $this->load->library('form_validation');
     	$this->load->helper('form');
@@ -36,7 +37,10 @@ class MaterielAdherent extends CI_Controller
                 $idCotisation = $this->materielAdherent->getIdCotisation()[0]->Id_Cotisation;
                 $this->materielAdherent->insertPaiement($numLicence, $idCotisation);
         } else {
-            $this->materielAdherent->insertLocation($dateAchat, $numLicence, $idMateriel, $qte);
+            $this->materielAdherent->insertLocation($dateAchat, $numLicence, $idMateriel, $qte, $temps);
+            $this->materielAdherent->insertCotisation($montantCotisation * $temps, $typeCotisation);
+            $idCotisation = $this->materielAdherent->getIdCotisation()[0]->Id_Cotisation;
+            $this->materielAdherent->insertPaiement($numLicence, $idCotisation);
         }
 
   		}

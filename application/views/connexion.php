@@ -23,6 +23,9 @@
     
    echo form_submit('envoi', 'Valider'); 
    echo form_close(); 
+
+
 ?>
+<a href="<?php echo site_url('inscription/accueil') ?>">S'inscrire</a></li>
 </body>
 </html> 
